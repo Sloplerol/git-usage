@@ -1,0 +1,40 @@
+Git 
+头部全部小写我这个自动大写了凑合看就行
+git init初始化
+Ls -l查看目录下有什么(不包含隐藏文件)
+Ls -a 查看目录下所有文件(包含隐藏文件)
+Git add name添加暂存区
+Git  commit -m ‘first commit’ 文件名 提交本地库
+Git log/git ref log查看版本
+Git reset —hard version切换版本
+Git  branch创建分支
+分支默认都为master
+Git  branch -v 查看分支
+Git checkout 分支名
+Git merge 要合并的分支
+如果合并的两个分支全都被修改过必须手动修改合并中的文件将划分的两个分支头去掉保存
+并且提交本地库时不写文件名
+Git clone来获取别人的代码 内部直接获取
+fork + git clone来获取外人代码
+pull requests 发送修改后的代码请求
+git remote add 远程库别名 http地址
+Git push 远程库别名 分支名(默认master) 推送文件至远程库
+Git pull 文本名 分支名(默认master) 本人在远程库修改pull实现本地与远程同步
+Git clone 仓库地址名 同时做完拉取代码 初始化本地库 创建别名三件事
+团队内协作:
+1.git clone 地址到本地库修改完后
+错误示范
+git clone 到本地库修改完
+add commit 
+git push http地址 分支
+显示没权限所以要将其拉入团队
+2.拉入团队方法
+选择那个仓库->setting->manage access->invite a Collaborator->Pending invite复制邀请函->发送给对面->在浏览器中粘贴->同意->获得本仓库权限
+3.将修改后的代码git push http地址 分支
+团队外修改代码:
+1.到指定仓库
+2.fork
+3.在线编辑button pencil
+4.pull request->new pull request->create pull requests对方merge
+利用ssh免密登陆ssh-keygen -t rsa -C “你的”邮箱”->敲三次回车->cd .ssh->ll或ls -l ->查看私钥和公钥cat id_rsa.public->回到github点击setting->SSH or GPG key->添加新的把刚才公钥内容输入->添加密钥
+之前http地址与ssh地址换着来
